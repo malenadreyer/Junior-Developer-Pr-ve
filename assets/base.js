@@ -48,3 +48,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Call the function on scroll
     window.addEventListener('scroll', highlightCurrentSection);
 });
+
+function openPopup() {
+    document.getElementById("popup").classList.add("show");
+}
+
+function closePopup() {
+    document.getElementById("popup").classList.remove("show");
+}
+window.onclick = function(event) {
+    let popup = document.getElementById("popup");
+    if (event.target === popup) {
+        closePopup();
+    }
+};
